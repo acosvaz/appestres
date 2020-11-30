@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="newcolor">
+    <ion-buttons slot="start" *ngIf="isLogged">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-center color="light" >Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="!isLogged">
+    <img src="assets/loguito.jpg" class="icon">
+    <br><br>
+    <ion-item>
+      <ion-label position="floating">Nombre de Usuario:</ion-label>
+      <ion-input type="text" name="username" [(ngModel)]="form.username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña:</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="form.password"></ion-input>
+    </ion-item>
+    <br><br>
+    <ion-button expand="full" (click)="onLogin()" color="newcolor">Siguiente</ion-button>
+    <br>
+  </div>
+  <div *ngIf="isLogged">
+    <img src="assets/loguito.jpg" class="icon">
+    <br>
+    <ion-text color="primary" text-center>
+      <h5>¡Hola {{ nombreUser }}!</h5>
+    </ion-text>
+    <br>
+    <ion-grid text-center>
+      <ion-row style = "color: white">
+        <ion-col style = "background-color: #ddd">
+         <h5>Tu grado de estres:
+         <br> {{this.nivel}} </h5>
+         <h5>Fecha: {{this.fecha}} </h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <br>
+
+</ion-content>

@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="newcolor">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title color="light">Test de estrés laboral</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-list-header>Instrucciones:
+De los siguientes síntomas, selecciona el grado experimentado durante los
+últimos 3 meses de acuerdo al semáforo presentado.</ion-list-header>
+  <ion-item>
+    <ion-label><h2>Imposibilidad de conciliar el sueño.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_1" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Jaquecas y dolores de cabeza.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_2" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Indigestiones o molestias gastrointestinales.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_3" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Sensación de cansancio extremo <br> o agotamiento.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_4" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Tendencia de comer, beber o <br> fumar más de lo habitual.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_5" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Disminución del interés sexual.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_6" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Respiración entrecortada o <br> sensación de ahogo.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_7" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Disminución del apetito.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_8" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Temblores musculares (tics o <br> parpadeos).</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_9" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Pinchazos o sensaciones dolorosas <br> en distintas partes del cuerpo.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_10" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Tentaciones fuertes de no levantarse <br> por la mañana.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_11" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label><h2>Tendencias a sudar, palpitaciones.</h2></ion-label>
+    <ion-select [(ngModel)]="form.respuesta_12" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+      <ion-select-option *ngFor="let escala of escalas" [value]="escala.valor">{{escala.letra}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+<br><br>
+<ion-button expand="full" color="newcolor" (click)="onCreate()">Crear</ion-button>
+
+</ion-content>
